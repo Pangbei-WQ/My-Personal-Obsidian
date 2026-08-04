@@ -1,0 +1,23 @@
+{
+  "id": "conv-1779705752097-u74tksxya",
+  "providerId": "claude",
+  "title": "导入PMC经理任职资格至知识库",
+  "titleGenerationStatus": "success",
+  "createdAt": 1779705752101,
+  "updatedAt": 1779966867470,
+  "lastResponseAt": 1779966867470,
+  "sessionId": "f02341e2-5f43-475c-9379-3a3b481adc2f",
+  "providerState": {
+    "providerSessionId": "f02341e2-5f43-475c-9379-3a3b481adc2f"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 367,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 100480,
+    "contextWindow": 200000,
+    "contextTokens": 100847,
+    "percentage": 50,
+    "contextWindowIsAuthoritative": true
+  }
+}

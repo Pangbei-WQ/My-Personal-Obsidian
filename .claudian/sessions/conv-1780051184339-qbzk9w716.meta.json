@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780051184339-qbzk9w716",
+  "providerId": "claude",
+  "title": "Delete empty daily notes in Obsidian",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780051184339,
+  "updatedAt": 1785843758066,
+  "lastResponseAt": 1785843754662,
+  "sessionId": "bdc19767-5729-4b1c-9560-b7a21e1ad899",
+  "providerState": {
+    "providerSessionId": "bdc19767-5729-4b1c-9560-b7a21e1ad899"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 843,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 66432,
+    "contextWindow": 200000,
+    "contextTokens": 67275,
+    "percentage": 34,
+    "contextWindowIsAuthoritative": true
+  }
+}

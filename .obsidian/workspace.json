@@ -1,0 +1,242 @@
+{
+  "main": {
+    "id": "ecd0a9b0024ff3e7",
+    "type": "split",
+    "children": [
+      {
+        "id": "b31ddd7e4b9ae72a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "64573bcecdf0a4df",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "276570ce0c099fc5",
+    "type": "split",
+    "children": [
+      {
+        "id": "cc50be759230c159",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d718833c6556cb9a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "8236b63b4aa24236",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "[\"tags\"]",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "7551a839bbdd32cd",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 264.5
+  },
+  "right": {
+    "id": "50da8a02dee19071",
+    "type": "split",
+    "children": [
+      {
+        "id": "14adc0379bcc0da5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5d26dd02ca97287c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "efee7bf7e8214b4f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "b4d9eb2c49b16020",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "d2511b7e36529697",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "47912fe759b5a135",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          },
+          {
+            "id": "ddfeef6f39638829",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 587.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "realclaudian:Open Claudian": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
+    }
+  },
+  "active": "ddfeef6f39638829",
+  "lastOpenFiles": [
+    "Daily/2026-05-29.md",
+    "Daily/2026-07-29.md",
+    "Daily/2026-07-31.md",
+    "Daily/2026-08-03.md",
+    "Daily/2026-07-13.md",
+    "2026我最常用的AI产品.md",
+    "全局工作规则.md",
+    "供应链知识库/2024.03.13物质泡比.md",
+    "供应链知识库/2023.10.14-15 高维学堂-供应链管理-如何实现快交付高周转/5【高维学堂】供应链风险评估表.md",
+    "供应链知识库/2023.10.14-15 高维学堂-供应链管理-如何实现快交付高周转/3【高维学堂】全国供应链管理专业大学排名榜（2022年最新）.md",
+    "供应链知识库/2025.05.26 高维-高上需求预测与库存管控/恩莱科技2025.05.25高上需求预测与库存管理-概要.md",
+    "供应链知识库/2025.05.26 高维-高上需求预测与库存管控/波士顿矩阵案例数据.md",
+    "供应链知识库/2025.05.26 高维-高上需求预测与库存管控/恩莱科技-部门盲点.md",
+    "供应链知识库/2025.05.26 高维-高上需求预测与库存管控/产能规划模板.md",
+    "供应链知识库/2025.05.26 高维-高上需求预测与库存管控/安全库存公式的证明.md",
+    "供应链知识库/2025.05.26 高维-高上需求预测与库存管控/保障高交付的8个要点.jpg",
+    "供应链知识库/2025.05.26 高维-高上需求预测与库存管控/恩莱科技集团行动计划.md",
+    "供应链知识库/2022.12.12 七七纸箱培训资料.md",
+    "供应链知识库/2025.07.14 向仁厚获取的EXCEL培训资料/《Excel实际应用》培训课件/《Excel实际应用》培训课程.md",
+    "供应链知识库/2025.07.14 向仁厚获取的EXCEL培训资料/《Excel实际应用》培训课件/5. 数据表与图表的基本美化操作/5.数据与图表美化.md",
+    "供应链知识库/2025.07.14 向仁厚获取的EXCEL培训资料/《Excel实际应用》培训课件/4. 透视表的常用功能介绍/4.数据透视表.md",
+    "供应链知识库/2025.07.14 向仁厚获取的EXCEL培训资料/《Excel实际应用》培训课件/2. 数据查找匹配常用方法与函数/2.演示案例.md",
+    "供应链知识库/2025.07.14 向仁厚获取的EXCEL培训资料/《Excel实际应用》培训课件/1. 快速处理数据汇总与更新（附自动化讲解）/汇总与自动更新母版.md",
+    "供应链知识库/2025.02.28-03.01电商破局盈利培训材料/3、高效构建供应链管理体系与优化20250301.md",
+    "供应链知识库/2025.02.28-03.01电商破局盈利培训材料/2、电商商品管理与策略体系建立20250301.md",
+    "供应链知识库/2025.02.28-03.01电商破局盈利培训材料/1、电商盈利破局路20250228.md",
+    "供应链知识库/2025.02.28-03.01电商破局盈利培训材料/1、电商盈利破局路 湛广/4-20250228_电商盈利破局路3.m4a",
+    "供应链知识库/2025.02.28-03.01电商破局盈利培训材料/1、电商盈利破局路 湛广/1、电商盈利破局路20250228.md",
+    "供应链知识库/2025.02.28-03.01电商破局盈利培训材料/1、电商盈利破局路 湛广/2-20250228_电商盈利破局路1.m4a",
+    "供应链知识库/~$24.03.13物质泡比.docx",
+    "供应链知识库/2024.03.13物质泡比.docx",
+    "供应链知识库/~WRD0001.tmp",
+    "供应链知识库/~$24.03.13物质泡比.doc",
+    "供应链知识库/~$22.12.12 七七纸箱培训资料.docx",
+    "供应链知识库/2022.12.12 七七纸箱培训资料.docx",
+    "供应链知识库/~WRD0000.tmp",
+    "供应链知识库/~$22.12.12 七七纸箱培训资料.doc",
+    "供应链知识库/2025.05.26 高维-高上需求预测与库存管控/预测复盘，与实际的偏差图.jpg",
+    "供应链知识库/2025.05.26 高维-高上需求预测与库存管控/设置库存管理绩效.jpg",
+    "供应链知识库/2025.05.26 高维-高上需求预测与库存管控/库存管理6步法.jpg",
+    "供应链知识库/2025.05.26 高维-高上需求预测与库存管控/工厂产能评估表.png",
+    "供应链知识库/2025.05.26 高维-高上需求预测与库存管控/如何让运营关注库存.jpg",
+    "供应链知识库/2025.05.26 高维-高上需求预测与库存管控/供应链11个工具表单.jpg",
+    "供应链知识库/2025.05.26 高维-高上需求预测与库存管控/专家判断法-新品评估表单.jpg",
+    "任职资格/PMC经理任职资格/PMC经理任职资格体系.canvas"
+  ]
+}

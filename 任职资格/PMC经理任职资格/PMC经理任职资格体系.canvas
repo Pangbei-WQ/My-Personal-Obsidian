@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"id":"readme","x":1200,"y":0,"width":250,"height":80,"type":"file","file":"任职资格/PMC经理任职资格/readme.md"},
+		{"id":"jd","x":100,"y":400,"width":300,"height":200,"type":"file","file":"任职资格/PMC经理任职资格/01-职位说明书.md"},
+		{"id":"path","x":550,"y":400,"width":300,"height":200,"type":"file","file":"任职资格/PMC经理任职资格/02-发展通道.md"},
+		{"id":"qual","x":1000,"y":400,"width":400,"height":350,"type":"file","file":"任职资格/PMC经理任职资格/03-任职资格标准.md"},
+		{"id":"sal","x":1550,"y":400,"width":300,"height":200,"type":"file","file":"任职资格/PMC经理任职资格/04-薪酬宽带.md"},
+		{"id":"graph","x":1200,"y":200,"width":300,"height":100,"type":"file","file":"任职资格/PMC经理任职资格/05-关系图谱.md"},
+		{"id":"note-core","x":100,"y":0,"width":300,"height":150,"type":"text","text":"🎯 PMC经理任职资格 - 核心知识库\n\n这份知识库完整定义了一级至五级的能力模型、行为标准、知识要求、AI辅助规范和薪酬体系。\n\n点击任意节点可打开对应笔记。"},
+		{"id":"note-usage","x":1550,"y":700,"width":300,"height":120,"type":"text","text":"💡 使用提示\n\n• 点击任职资格标准查看各等级能力详情\n• 在 Graph View 中查看所有笔记的关联图\n• 关系图谱页有完整的 Mermaid 可视化"}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"readme","fromSide":"bottom","toNode":"jd","toSide":"top","label":"目录索引"},
+		{"id":"e2","fromNode":"readme","fromSide":"bottom","toNode":"path","toSide":"top","label":"目录索引"},
+		{"id":"e3","fromNode":"readme","fromSide":"bottom","toNode":"qual","toSide":"top","label":"目录索引"},
+		{"id":"e4","fromNode":"readme","fromSide":"bottom","toNode":"sal","toSide":"top","label":"目录索引"},
+		{"id":"e5","fromNode":"jd","fromSide":"right","toNode":"qual","toSide":"left","label":"职责 ← 能力项引用"},
+		{"id":"e6","fromNode":"path","fromSide":"right","toNode":"qual","toSide":"left","label":"等级 → 能力标准"},
+		{"id":"e7","fromNode":"path","fromSide":"bottom","toNode":"sal","toSide":"top","label":"职级 → 薪资"},
+		{"id":"e8","fromNode":"qual","fromSide":"right","toNode":"sal","toSide":"left","label":"等级 → 薪资评定"},
+		{"id":"e9","fromNode":"jd","fromSide":"bottom","toNode":"path","toSide":"bottom","label":"岗位 → 发展路径"},
+		{"id":"e10","fromNode":"graph","fromSide":"bottom","toNode":"qual","toSide":"top","label":"可视化说明"},
+		{"id":"e11","fromNode":"graph","fromSide":"bottom","toNode":"jd","toSide":"top","label":"可视化说明"},
+		{"id":"e12","fromNode":"graph","fromSide":"bottom","toNode":"path","toSide":"top","label":"可视化说明"},
+		{"id":"e13","fromNode":"graph","fromSide":"bottom","toNode":"sal","toSide":"top","label":"可视化说明"}
+	]
+}

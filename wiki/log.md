@@ -12,6 +12,34 @@ graph: false
 
 ---
 
+## [2026-08-18 00:12] ingest | 抖音视频采集：12个AI热词底层逻辑（智能体阿朱）
+
+应庞贝要求采集抖音分享链接 `https://v.douyin.com/cxkQrWYNwMs/` 的内容，并修复 douyin-obsidian skill 的抖音解析失效问题。
+
+**来源：** 抖音视频（ID `7663830577270998501`，作者"智能体阿朱"，2026-07-18 发布，时长 20:06）
+
+**获取手段（突破抖音签名保护）：**
+- 原 skill 的 SSR 解析失效（抖音移除 `videoInfoRes`，web API 需 JS 签名）
+- 改用 **Playwright 驱动本机 Edge** 加载页面，拦截 `aweme/v1/web/aweme/detail` API 响应 → 拿到完整视频元信息 + 无水印播放地址
+- 下载 540p 无水印视频（53MB）→ FFmpeg 提取音频 → **硅基流动 SenseVoiceSmall 转录**（7490 字，53s）
+
+**新建 wiki 页面：**
+- `wiki/AI与工具/12个AI热词底层逻辑-抖音视频.md` — 视频元信息、12 个热词总览表、关键洞察、**完整逐字稿**（`<details>` 折叠）
+
+**级联更新：**
+- `wiki/index.md` — AI与工具 目录新增条目，更新统计（16→17 页面，未审核 16→17）
+- `wiki/log.md` — 本条记录
+
+**工具链修复（供后续复用）：**
+- `~/.claude/skills/douyin-obsidian/scripts/douyin_downloader.py` 已加入 Playwright 兜底方案（SSR 解析失败时自动回退），依赖 `playwright` + 本机 Edge
+- 临时抓取脚本保留于系统临时目录 `%TEMP%/douyin-work/`（video.mp4、audio.mp3、transcript.txt、capture.json、info.json）
+
+**注意事项：**
+- 逐字稿为 ASR 自动识别，个别词可能有识别误差（如 "prot"/"RAAG"/"突 calling" 应为 "Prompt"/"RAG"/"Tool Calling"），人工校对时注意。
+- 视频文件已临时下载，如需长期保留可转存到 vault。
+
+---
+
 ## [2026-08-17 22:48] lint | 知识库健康检查（neat-freak）
 
 应庞贝要求执行全库一致性检查（`/neat-freak`）。

@@ -12,6 +12,50 @@ graph: false
 
 ---
 
+## [2026-08-18 23:40] ingest | 抖音视频采集：10分钟弄懂VibeCoding（程序老王）
+
+应庞贝要求采集抖音分享链接 `https://v.douyin.com/khLnsW1f-uM/` 的内容。
+
+**来源：** 抖音视频（ID `7654410171170458918`，作者"程序老王"，标题自称时长 10 分钟）
+
+**获取手段：**
+- douyin-obsidian skill 管线：解析链接 → 下载无水印视频 → FFmpeg 提取音频 → 硅基流动 SenseVoiceSmall 转录（全片逐字稿，临时目录，未入 raw/）
+
+**新建 wiki 页面：**
+- `wiki/AI与工具/10分钟弄懂VibeCoding-抖音视频.md` — 视频元信息、模型/Agent/工作流三层结构、VibeCoding 命名与两年演化、关键洞察、完整逐字稿（`<details>` 折叠）
+
+**级联更新：**
+- `wiki/index.md` — AI与工具 目录新增条目，更新统计（18→19 页面，其他 7→8，未审核 18→19；Raw 源文件不变）
+- `wiki/log.md` — 本条记录
+
+**注意事项：**
+- 逐字稿为 ASR 自动识别，个别词有误差，已在页面标注待核实项：模型代号「misss」「feable」（疑为 Claude 新版本）、谷歌 CLI 工具「ant gravity」；「书使得其还中，已应无穷」应为《庄子·齐物论》"枢始得其环中，以应无穷"。
+
+---
+
+## [2026-08-18 23:30] ingest | 公众号采集：深度思考 Prompt「双向钢人论证」（数字生命卡兹克）
+
+应庞贝要求整理公众号文章 `https://mp.weixin.qq.com/s/6eDElggMR7aefaEzlWfVMA`。
+
+**来源：** 公众号「数字生命卡兹克」《一个极度实用的深度思考Prompt，帮你挖出最本质的答案。》（2026-08-18 07:58 发布）
+
+**获取手段：**
+- `wechat-article-to-markdown`（Camoufox 反检测抓取）→ 全文 Markdown + 11 张图片本地化
+- 保存至 `raw/网页剪藏/一个极度实用的深度思考Prompt，帮你挖出最本质的答案。/`（该目录为 AGENTS.md 预留的网页剪藏区，首次启用）
+
+**新建 wiki 页面：**
+- `wiki/AI与工具/双向钢人论证深度思考Prompt.md` — 核心概念（steelman vs strawman）、双向钢人 Prompt 原文、四件事、司庆日实战案例
+
+**级联更新：**
+- `wiki/index.md` — AI与工具 目录新增条目，更新统计（17→18 页面，其他 6→7，Raw 源文件 47→48，未审核 17→18）
+- `wiki/log.md` — 本条记录
+
+**待补充/注意：**
+- 原文中 "Fable 5" / "GPT 5.6 Sol" 为作者语境模型名，已在页面标注 LLM 推断提醒
+- 11 张截图（推特分享、Reddit 原帖、ChatGPT 司庆日对话演示）留存在 raw 剪藏目录，wiki 页未嵌入
+
+---
+
 ## [2026-08-18 00:12] ingest | 抖音视频采集：12个AI热词底层逻辑（智能体阿朱）
 
 应庞贝要求采集抖音分享链接 `https://v.douyin.com/cxkQrWYNwMs/` 的内容，并修复 douyin-obsidian skill 的抖音解析失效问题。

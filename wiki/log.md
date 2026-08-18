@@ -12,6 +12,43 @@ graph: false
 
 ---
 
+## [2026-08-19 01:15] ingest | 新建 BUILDING.md（仓库根目录搭建说明）
+
+应庞贝要求，将 [[wiki/工作方法/LLM-Wiki知识库搭建指南]] 精简为仓库根目录的 `BUILDING.md`，供下次推送远程后让 clone 仓库的人第一眼可读。
+
+**新建文件：**
+- `BUILDING.md`（根目录）— 先读三句话、目录结构、权限表、四个核心决策、核心机制（状态机/Ingest/Query/Lint）、一键初始化 Prompt、日常维护速查、常见问题（FAQ）、指向详细版指南与 AGENTS.md
+
+**级联更新：**
+- `wiki/index.md` — 工作方法 新增 [[BUILDING.md]] 条目 + 最近更新；统计不变（根目录文档不计入 wiki 页面数）
+- `wiki/log.md` — 本条记录
+
+**备注：**
+- 为便于 git 推送，BUILDING.md 内使用相对路径链接到 [[wiki/工作方法/LLM-Wiki知识库搭建指南]] 与 [[AGENTS.md]]（Obsidian wiki-link 语法，纯文本仓库中亦可见）。
+- 待用户下次推送时一并提交。
+
+---
+
+## [2026-08-19 01:10] ingest | 知识整合：LLM-Wiki 知识库搭建指南
+
+应庞贝要求，复盘本 vault 的搭建逻辑，并整理成"教别人/教新 AI 重建这套结构"的复现手册。
+
+**背景：**
+- 查询 `.claudian/sessions/` 会话记录，未找到 2026-08-07 init 时的逐字指令（仅存 git 相关会话），故搭建逻辑基于 `wiki/log.md` init 记录 + `AGENTS.md` 设计重建。
+- 确认 vault 中此前无独立搭建说明文档。
+
+**新建 wiki 页面：**
+- `wiki/工作方法/LLM-Wiki知识库搭建指南.md` — 设计原理（raw 只读 / wiki 维护 / AGENTS 契约 / index+log 审计）、目录结构与权限表、审核状态机、Ingest/Query/Lint 流程、**一键初始化 Prompt**（可复制给任意 AI 在空 vault 重建）、日常维护速查表、与 AGENTS.md 的关系说明
+
+**级联更新：**
+- `wiki/index.md` — 工作方法 新增条目（标 🔥），更新统计（23→24 页面，知识整合 4→5，未审核 23→24；Raw 源文件不变）
+- `wiki/log.md` — 本条记录
+
+**性质说明：**
+- 本页为 LLM 综合 `AGENTS.md` + `wiki/log.md` + 实际结构整理的教程页，标注为 `unreviewed`，待人工审核。「一键初始化 Prompt」为 LLM 编写，建议人工试用后再分享给他人。
+
+---
+
 ## [2026-08-19 00:55] ingest | 知识整合：RAG 工程化方法论专题串讲
 
 应庞贝要求，将刚采集的《RAG向量库实战讲透》与已有的《12个AI热词》《AI知识库工作台》编织为 RAG 工程化方法论专题。

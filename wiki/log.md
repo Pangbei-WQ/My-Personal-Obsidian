@@ -12,6 +12,29 @@ graph: false
 
 ---
 
+## [2026-08-20 00:55] ingest | 抖音视频采集：7天用 WorkBuddy 搭建你的 AI 数字员工
+
+应庞贝要求采集抖音分享链接 `https://v.douyin.com/plonXx2bB2Y/` 的内容（用户提问"看下这个抖音视频，关于数字员工的搭建"）。
+
+**来源：** 抖音视频（ID `7658628408187948315`，标题《7天用 WorkBuddy 搭建你的 AI 数字员工》，作者元数据未返回，口播讲解，疑似 WorkBuddy 产品讲师/官方）
+
+**获取手段：**
+- douyin-obsidian skill 管线：解析链接 → 下载无水印视频 → FFmpeg 提取音频 → 硅基流动 SenseVoiceSmall 转录（全片逐字稿，临时目录 `%TEMP%/douyin_workbuddy`，未入 raw/）
+- 修复：首次下载遇 403（抖音 CDN 防盗链），在 `douyin_downloader.py` 的 HEADERS 中加入 `Referer: https://www.douyin.com/` 并改用桌面 Chrome UA 后成功
+
+**新建 wiki 页面：**
+- `wiki/AI与工具/WorkBuddy搭建AI数字员工-抖音视频.md` — 视频元信息、一句话总结、四步搭建法（工作台→工具与岗位→本地数据库→员工手册）、五大概念翻译成工作动作（MCP/Skills/专家/记忆/自动化 + 判断口诀）、WorkBuddy 实操（连接器/技能/专家团/记忆/自动化）、LLM Wiki 本地知识库三层架构（raw/wiki/output 权限边界）、agent.md 员工手册结构（理念/意图优先级/三层架构/启动协议/驾驭规则/冲突裁决顺序/模糊任务阈值/资料入库/知识查询/持续维护）、7天落地计划、与本 vault 同构对照（LLM 推断）、完整逐字稿（`<details>` 折叠）
+
+**级联更新：**
+- `wiki/index.md` — AI与工具 新增条目 + 最近更新；统计更新（24→25 页面，其他 10→11，未审核 24→25；Raw 源文件不变）
+- `wiki/log.md` — 本条记录
+
+**备注：**
+- 本页包含 LLM 推断的"与本知识库的关联"对照表，已用 `> ⚠️` 分隔，待人工审核。
+- 建议跟进：本 vault 是否建立独立 `output/` 衍生创作层（与视频的 raw/wiki/output 三层对齐）。
+
+---
+
 ## [2026-08-19 01:15] ingest | 新建 BUILDING.md（仓库根目录搭建说明）
 
 应庞贝要求，将 [[wiki/工作方法/LLM-Wiki知识库搭建指南]] 精简为仓库根目录的 `BUILDING.md`，供下次推送远程后让 clone 仓库的人第一眼可读。

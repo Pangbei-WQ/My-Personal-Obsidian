@@ -12,7 +12,22 @@ graph: false
 
 ---
 
-## [2026-08-21 01:16] ingest | 抖音视频 → Seedance2.0「零实拍 AI 广告短片工作流」wiki 页
+## [2026-08-21 01:56] ingest | 抖音视频 → 第二大脑自动运转系统 wiki 页
+
+应庞贝要求整理抖音视频（`https://v.douyin.com/r6pVn9H3C28/`），经 douyin-obsidian skill 识别为视频帖子，语音转录后提炼入库。
+
+**新建 wiki 页面（`wiki/AI与工具/`，`unreviewed`）：**
+- `第二大脑自动运转系统-抖音视频.md` — 卡帕西（Karpathy）LLM-Wiki 只搭"半个大脑"（只解决编译层，输入/输出两端接不上 → 高级收藏夹）；作者补齐三层机制：三入口捕获（iOS 快捷指令 / Obsidian Web Clipper / 微信语音）+ 双路由处理（Obsidian+Claude 慢消化长期图谱 ↔ NotebookLM 快加工多媒体，回流互养）+ 双约束输出（防囤积、防只消化不产出）；Mac mini 24h 心跳机制唤醒 Claude Code 自动产出视频；含核心结构总览表、要点提炼、完整逐字稿（`<details>` 折叠）
+
+**级联更新：**
+- `wiki/index.md` — AI与工具区新增条目 + 最近更新置顶 + 统计更新（Wiki 60→61，其他 27→28，未审核 60→61）
+- 与 [[wiki/工作方法/LLM-Wiki知识库搭建指南]]、[[wiki/AI与工具/WorkBuddy搭建AI数字员工-抖音视频]]、[[wiki/AI与工具/AI知识库工作台-抖音视频]] 等已互链
+
+**ASR 谐音待核实（已标注在页面「待补充」）：** 「卡巴西」（Karpathy）、「LMvicki」（LLM Wiki）、「work body」（微信语音转录工具）、「ob web clip」（Obsidian Web Clipper）、「cloud 插件」（Obsidian 内运行 Claude Code 的插件）。作者署名待核实（视频由作者管线自动生成，抖音页面反爬）。
+
+**缺失概念（待建）：** 无新增。视频提到"完整施工手册网页"，ASR 未转出 URL，待获取后可补充。
+
+---
 
 应庞贝要求整理抖音视频（`https://v.douyin.com/pe36yNNSEd4/`），经 douyin-obsidian skill 识别为视频帖子，语音转录后提炼入库。
 

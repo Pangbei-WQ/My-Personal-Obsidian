@@ -155,6 +155,7 @@ sources:
 
 ## 相关页面
 
+- [[wiki/AI与工具/卡兹克-12个常用Prompt合集]] — 作者 4 年 12 个 Prompt 合集，本文是其中「学习」场景的单篇
 - [[wiki/AI与工具/卡兹克-目标七问-Leader.skill]] — 作者称做 Leader.skill 时"用 AI 做了大量横纵分析调研"
 - [[wiki/AI与工具/双向钢人论证深度思考Prompt]] — 同为「数字生命卡兹克」研究/思考类 Prompt
 - [[wiki/AI与工具/RAG工程化方法论串讲]] — 知识库中已有的深度研究方法论

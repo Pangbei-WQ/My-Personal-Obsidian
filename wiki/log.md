@@ -12,7 +12,22 @@ graph: false
 
 ---
 
-## [2026-09-01 23:00] config | 创建 `raw/收件箱/` 捕获端入口
+## [2026-09-01 23:26] config | 安装 Obsidian Web Clipper（捕获端"链接/网页"入口）
+
+应庞贝要求安装 Obsidian Web Clipper，作为收件箱工作流（`raw/收件箱/README.md`）的"链接/网页"入口工具。
+
+**已完成：**
+- 浏览器扩展 v1.7.1（chrome 版，兼容 Edge）下载解压至 `E:\桌面\obsidian-web-clipper`（含 `安装说明.md`）
+- Obsidian 插件 `obsidian-local-rest-api` v5.1.0（Web Clipper 的 Obsidian 接收端）部署至 `.obsidian/plugins/obsidian-local-rest-api/`（id/name/version 已验证）
+
+**待人工完成（浏览器/插件安全限制，无法全自动）：**
+- Edge `edge://extensions` → 开发人员模式 → 加载解压的扩展 → 选 `E:\桌面\obsidian-web-clipper`（扩展页已代为打开）
+- 重启 Obsidian → 启用「Local REST API with MCP」→ 记录 API Key
+- 扩展设置连接 `https://127.0.0.1:27124` + API Key，默认保存目录建议指向 `raw/收件箱/链接`
+
+**注意：** `E:\桌面\obsidian-web-clipper` 文件夹扩展运行依赖，不可删除。
+
+---
 
 应庞贝要求（承接"第二大脑自动运转系统"视频的落地计划，P1 第一步），在 `raw/` 下创建统一收件箱，作为知识库的捕获端入口。
 

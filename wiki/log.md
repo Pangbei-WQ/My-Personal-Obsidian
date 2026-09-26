@@ -12,6 +12,19 @@ graph: false
 
 ---
 
+## [2026-09-27 01:26] config | 工作方法：抖音视频提取 CDP 绕过反爬 → 新建 1 页
+
+- 来源：本次 00:50 采集的实战经验 + `web-access/scripts/cdp_capture.mjs` + `douyin-obsidian/scripts/douyin_downloader.py`
+- 背景：douyin-obsidian 默认链路（`requests` 抓 SSR `window._ROUTER_DATA` → `videoInfoRes`）失效（抖音改为前端异步加载，接口返回 `encrypt_data_miss` / Argus 拦截）；改用 CDP 真实浏览器驱动页面自发带签名 `aweme/detail` 请求 + 截获音频直链 `media-audio-und-mp4a` 成功
+- 新建页面：[[wiki/工作方法/抖音视频提取-CDP绕过反爬]]（unreviewed）— 失败方法剖析 + CDP 成功方法操作手册 + 两种方法本质区别对照表 + 与 Playwright 同族关系 + 适用边界/风险
+- 核心结论：两条路下游 FFmpeg→ASR 完全一致，差异仅在"如何拿音频源+元数据"；成败取决于是否使用带登录态的真实浏览器（签名+Cookie）
+- 级联更新：
+  - [[wiki/index.md]]（工作方法 +1 页，统计 Wiki 67→68 / 未审核 66→67）
+  - [[wiki/log.md]]（本条记录）
+- 备注：脚本留在 web-access skill tmp 目录，未进 vault，属临时绕过方案；端口号易错（浏览器须 9222，非代理 3456）
+
+---
+
 ## [2026-09-27 00:50] ingest | 抖音视频：采购降本，只会砍价？ → 新建 1 页 + 级联 6 页
 
 - 来源：抖音视频（ID `7689280022678441225`，https://v.douyin.com/CXXm1AH6U0o/ ，作者 Walter学长(求职版)，发布 2026-09-25，时长 ~3:19）

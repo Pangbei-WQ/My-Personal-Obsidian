@@ -53,7 +53,7 @@ vault-root/
 |------|:----:|:----:|:----:|:----:|------|
 | `raw/` | ✅ | ❌ | ❌ | ❌ | 只读，原始资料不可变 |
 | `wiki/` | ✅ | ✅ | ✅ | ✅ | LLM 全权维护，index/log 每次操作必更新 |
-| `raw/文档/Daily/` | ✅ | ❌ | ❌ | ❌ | 日记是人工私人空间 |
+| `raw/知识文件归档/Daily/` | ✅ | ❌ | ❌ | ❌ | 日记是人工私人空间 |
 | `AGENTS.md` | ✅ | ⚠️ | ⚠️ | ❌ | 修改前需人工确认 |
 
 ---
@@ -106,7 +106,7 @@ vault-root/
 3. 创建根目录 `AGENTS.md`（LLM 操作契约），内容必须包含：
    - 角色定义：LLM 是知识库管理员，负责把 raw/ 消化提炼进 wiki/，响应用户查询并引用来源，定期健康检查。
    - 四条核心原则：来源至上（所有论断可追溯）、诚实标记（推断不冒充已审核）、级联维护（新资料入库时更新所有受影响页面）、可逆可审计（每次操作记 log）。
-   - 目录权限表：raw/ 只读不可变；wiki/ LLM 全权维护；raw/文档/Daily/ 只读；AGENTS.md 改前需人工确认。
+   - 目录权限表：raw/ 只读不可变；wiki/ LLM 全权维护；raw/知识文件归档/Daily/ 只读；AGENTS.md 改前需人工确认。
    - 审核状态机：unreviewed / reviewed（仅人工可设）/ disputed / outdated，并写明"LLM 不得把 review_status 设为 reviewed"。
    - Ingest 流程、Query 流程、Write-back 流程、Lint 健康检查流程。
    - 页面模板（YAML frontmatter 含 date/tags/review_status/sources）。

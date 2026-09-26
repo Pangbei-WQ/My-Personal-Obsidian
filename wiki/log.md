@@ -12,6 +12,19 @@ graph: false
 
 ---
 
+## [2026-09-27 01:40] ingest | 抖音视频：制造业供应链面试三类能力题 → 新建 1 页
+
+- 来源：抖音视频（ID `7679825619114347830`，https://v.douyin.com/HeKi9JgTOLI/ ，作者 Walter学长(求职版)，发布 2026-09-27，时长 ~3:25）
+- 方法：CDP 真实浏览器（9222 + edge-profile 登录态）→ 拦截带签名 `aweme/detail` 拿元数据 + 截获音频直链 `media-audio-und-mp4a` → FFmpeg 转 16k 单声道 → 硅基流动 SenseVoiceSmall 转写（STATUS 200，全文已修正明显同音错字）
+- 新建页面：[[wiki/求职/制造业供应链面试三类能力题-抖音视频]]（unreviewed）— 供应链系统认知 / 供需平衡与库存决策 / 供应韧性与风险应对 三能力框架 + 每类"失分回答 vs 高分思路"对照 + 完整逐字稿
+- 核心结论：制造业供应链岗面试题本质只考三种能力——能否建立系统视角 / 能否在不确定需求下平衡库存 / 供应中断时能否组织协同；本篇为 [[wiki/求职/制造业采购面试三类题-抖音视频]] 的"供应链系统版"姊妹作
+- 级联更新：
+  - [[wiki/index.md]]（求职 +1 页，统计 Wiki 68→69 / 求职 5→6 / 未审核 67→68）
+  - [[wiki/log.md]]（本条记录）
+- 备注：未写 raw 存档（AGENTS.md 规定 raw/ 只读，LLM 不得写入）；逐字稿直接嵌入 wiki 页「原文」折叠块
+
+---
+
 ## [2026-09-27 01:26] config | 工作方法：抖音视频提取 CDP 绕过反爬 → 新建 1 页
 
 - 来源：本次 00:50 采集的实战经验 + `web-access/scripts/cdp_capture.mjs` + `douyin-obsidian/scripts/douyin_downloader.py`

@@ -48,8 +48,12 @@ sources:
 ```bash
 # 必须是 9222（浏览器调试端口），不是 3456（web-access 代理的 API 端口）
 # 用独立 profile，切勿杀掉用户正在用的主浏览器
+# ⚠️ 必须带 --remote-allow-origins=*：否则 cdp_capture.mjs 直连浏览器 WS 会收到 403，
+#    现象是 "Received network error or non-101 status code" / WebSocket 握手失败。
+#    若发现 9222 上已有旧实例但缺该 flag，先 taskkill 掉再用本命令重启（headed 模式，勿加 --headless）。
 "/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" \
   --remote-debugging-port=9222 \
+  --remote-allow-origins=* \
   --user-data-dir="C:/Users/Lenovo/.workbuddy/skills/web-access/edge-profile"
 ```
 

@@ -81,6 +81,7 @@ sources:
 - [[wiki/AI与工具/李继刚-当我们说提示词时-宇宙语与共振]] — "对话关系"与"IM 式协作"呼应
 - [[wiki/AI与工具/WorkBuddy搭建AI数字员工-抖音视频]] — 当前 Agent 工作流的实操形态（对比未来范式）
 - [[wiki/AI与工具/卡兹克-目标七问-Leader.skill]] — 长程 Agent 防跑偏（与"主动推进"互补）
+- [[wiki/AI与工具/OPC一人公司]] — Agent 的供给侧视角：Agent 由人提供、需重写 Infra 支撑多人调用（agent as cluster），与本页消费侧视角互补（开始连接 Vol.118）
 
 ## 待补充
 

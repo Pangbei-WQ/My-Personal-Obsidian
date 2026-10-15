@@ -12,6 +12,15 @@ graph: false
 
 ---
 
+## [2026-10-15 12:20] ingest | 小宇宙播客《开始连接》Vol.118 → wiki/AI与工具/OPC一人公司
+
+- 来源：raw/知识文件归档/播客转录/开始连接LinkStart-Vol118-你以为OPC是个体户其实它是一种全新的物种.md（新建子目录"播客转录"）
+- 转录管线：xiaoyuzhou-transcribe skill（whisper medium 本地转写）+ ASR 专名校对（25 处替换，记录见转录文末）；"征流→蒸馏""人意化→异化"据官方单集简介确认
+- 新建页面：wiki/AI与工具/OPC一人公司.md（unreviewed，含金句表）
+- 级联更新：wiki/AI与工具/李继刚-AI迎面而来-判断稀缺.md、wiki/AI与工具/葬爱咸鱼-AI创业怪现状.md、wiki/AI与工具/十字路口-对谈Paperboy-Agent主动形态.md（各补 1 条相关页面入链）
+- 缺失概念（待建）：Agent as Cluster / 判断力密度（已在本页内展开，暂不独立建页）
+- 附件说明：原始音频 episode.m4a（117MB）与带时间戳 transcript.txt 留存于工作目录 .workbuddy/podcast_work/，不入 Git
+
 ## [2026-10-10 12:45] create | 求职：跨境采购面试案例演练稿 → 新建 1 页 + 反哺豹团页
 
 - 来源：[[履历与项目案例库]] 案例 1（跨境物流供应商汰换）与案例 5（英氏京东出货表）+ 用户要求"改写成跨境电商版"

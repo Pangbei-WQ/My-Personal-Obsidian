@@ -11,7 +11,7 @@ sources:
 
 # 抖音视频提取：CDP 真实浏览器绕过反爬
 
-> **状态**：unreviewed / 最后更新 2026-09-27
+> **状态**：unreviewed / 最后更新 2026-10-15
 > **来源**：[[wiki/log.md]]（2026-09-27 00:50 采购降本视频采集、2026-08-18 00:12 12 热词视频采集）、web-access skill 的 `cdp_capture.mjs`、douyin-obsidian skill 的 `douyin_downloader.py`
 
 ## 核心要点
@@ -112,6 +112,23 @@ sources:
 - ⚠️ **依赖用户登录态**：必须用用户自己的浏览器配置（带抖音 Cookie）。无登录态时签名/接口仍可能失败。
 - ⚠️ **9 秒等待是脆弱的**：靠固定 sleep 等页面加载，网络慢或接口延迟会漏抓。更稳的做法是监听 `Network.loadingFinished` 或轮询直到拿到 `aweme_detail`。
 - ✅ 下游 FFmpeg / ASR 链路稳定，可长期复用，无需改动。
+- ✅ **2026-10-15 增补：无登录态的 Playwright 无头浏览器验证成功**（见第六节）——推翻了"必须用户 Cookie"的旧结论，这是当前**首选方案**（无需用户开调试端口、无需登录态）。
+
+## 六、无登录态 Playwright 无头方案（2026-10-15 验证成功）
+
+> 案例：[[wiki/AI与工具/普通人如何用AI实现跃迁-刘小排访谈-抖音视频]]（35:32 长视频，从下载到 14,711 字转录全程自动化）。
+
+要点：
+
+1. **不需要用户 Cookie/登录态**：playwright 全新 context（无任何 cookie）打开 `https://www.douyin.com/video/<id>`，页面自发签名的 `aweme/detail` 照样返回全量 `aweme_detail`。旧结论"必须登录浏览器 Cookie"（第五节 ⚠️）至少在 2026-10-15 不成立。
+2. 隐身处理：`launch(args=["--disable-blink-features=AutomationControlled"])` + `add_init_script("Object.defineProperty(navigator,'webdriver',{get:()=>undefined})")`。
+3. 捕获：`page.on("response")` 里判断 URL 含 `aweme` 且 `detail`，`resp.text()` 存盘——比固定 sleep 稳（轮询 `<video>` 就绪后多等几秒再收尾）。
+4. **视频直链用 API 响应里的 `play_addr.url_list[0]`，不要用页面 `<video>` 的 src**：那是占位视频（`uuu_265.mp4`）或 MSE blob。下载带 `Referer: https://www.douyin.com/` + 桌面 UA，190MB 长视频直链可下。
+5. 下游不变：ffmpeg（`-ac 1 -ar 16000`）→ douyin-obsidian skill 的 `DouyinProcessor.extract_text_from_audio`（>1h 或 >50MB 自动 9 分钟分段）。
+6. ⚠️ 版本坑：pip playwright 与 `ms-playwright` 已装内核 build 号不匹配会报 executable 不存在；用 `executable_path` 直接指向已有 `chromium-<build>/chrome-win64/chrome.exe` 绕过，不必重装内核。
+7. `iesdouyin.com/share/video/<id>/` 的 `_ROUTER_DATA` 也已不含 `videoInfoRes`——纯 requests 彻底无解，别再试。
+
+流程对照表新增一列：**无头 Playwright（2026-10-15）**——取源=无登录 context 打开页面；元数据=拦截带签名响应；媒体=API `play_addr` 整段视频；签名/Cookie=页面 JS 现场生成（无需登录态）；JS=是。
 
 ## 相关页面
 

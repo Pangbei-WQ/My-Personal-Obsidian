@@ -12,6 +12,16 @@ graph: false
 
 ---
 
+## [2026-10-15 12:45] ingest | 抖音视频《普通人如何使用AI实现跃迁》刘小排访谈 → wiki/AI与工具/普通人如何用AI实现跃迁-刘小排访谈-抖音视频
+
+- 来源：分享链接 https://v.douyin.com/MrEODzR4MYI/（视频 ID 7683407444361399590，发布账号 第二次用火Fire2.0 访谈刘小排，2026-09-09 发布，35:32，3.9w 赞 / 2.9w 收藏）
+- 采集链路变更：douyin-obsidian skill 默认 requests 链路彻底失效（iesdouyin 分享页 SSR 亦不再含 videoInfoRes）；CDP 需用户浏览器开调试端口本次不可用；改用 **playwright 无头 Chromium（无登录态）+ page.on("response") 截获带签名 aweme/detail** 成功，视频经 play_addr 直链（带 Referer）下载 190MB → ffmpeg 抽音轨 → 硅基流动 ASR 分段转录 14,711 字
+- 新建页面：wiki/AI与工具/普通人如何用AI实现跃迁-刘小排访谈-抖音视频.md（unreviewed，深度档：元信息表 + 10 节论点提炼 + 金句 + 11 条认知模型速查表 + 完整逐字稿折叠块）
+- 级联更新：wiki/工作方法/抖音视频提取-CDP绕过反爬.md（新增第六节"无登录态 Playwright 无头方案"，推翻"必须用户 Cookie"旧结论；补 play_addr vs 页面 video src 占位符、executable_path 版本坑）、wiki/index.md（AI 与工具置顶 + 最近更新）
+- 缺失概念（待建）：capability vs productivity（已在本页展开，暂不独立建页）；Token Max（同上）
+- 待核实：Webflow 前 CTO 姓名与新产品名（转录音译"不舟/plo"）、"玻璃之翼"项目、Firefox 270+ 漏洞出处 —— 均已在该页"待补充"列出
+- 附件说明：原始视频 dy_video.mp4（190MB）已清理，音频 dy_audio.mp3（12MB）与 dy_transcript.txt 留存于 ~/.workbuddy/tmp/，不入 Git
+
 ## [2026-10-15 12:20] ingest | 小宇宙播客《开始连接》Vol.118 → wiki/AI与工具/OPC一人公司
 
 - 来源：raw/知识文件归档/播客转录/开始连接LinkStart-Vol118-你以为OPC是个体户其实它是一种全新的物种.md（新建子目录"播客转录"）
